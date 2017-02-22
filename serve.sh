@@ -8,4 +8,4 @@ SITEDIR=$HOME/ericnode
 CONFIG=$SITEDIR/config.toml
 PORT=8080
 
-$HUGO server -w --config $CONFIG -p $PORT -b ${BASEURL} --bind ${BIND} -s $DIR
+$HUGO server -w --config $CONFIG -p $PORT -b ${BASEURL} --bind ${BIND} -s $SITEDIR
