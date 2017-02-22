@@ -19,8 +19,6 @@ tags:
 
 既然在启动时能够显示logo，那么按照自己的要求来贴图也就是可能的。关于logo的显示可以参考fbmem.c和logo.c文件。
 
-<!--more-->
-
 在fbmem.c中fb\_prepare\_logo()调用logo.c中的fb\_find\_logo()获得struct linux_logo指针，该结构体中包含了logo显示的数据和各种参数如高宽。
 
 然后fbmem.c中fb\_show\_logo()函数中调用fb\_show\_logo\_line()进行实际的显示操作。不需要管fb\_show\_extra\_logos()，一般这个函数不会有用处的。

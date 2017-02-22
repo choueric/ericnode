@@ -19,7 +19,7 @@ hi Over80 guifg=fg guibg=Blue
 au BufNewFile,BufRead *.* match Over80 '\%>80v.*'
 ```
 
-第一句是定义了自己的颜色方案，第二句则是在BufNewFile和BufRead事件发生时对于\*.\*的文件执行命令`match Over80 '\%>80v.*'`，这样的话便可以自动执行匹配命令来提醒了。<!--more-->
+第一句是定义了自己的颜色方案，第二句则是在BufNewFile和BufRead事件发生时对于\*.\*的文件执行命令`match Over80 '\%>80v.*'`，这样的话便可以自动执行匹配命令来提醒了。
 
 后来在vim的wiki上搜索80字符限制时（怎么没一早想到这个呢，还在google上搜了那么长时间），发现是有针对该功能的：<a title="http://vim.wikia.com/wiki/Highlight_long_lines" href="http://vim.wikia.com/wiki/Highlight_long_lineshttp://" target="_blank">http://vim.wikia.com/wiki /Highlight_long_lines</a>。看了一下，他的两种方法中居然有一种是和我的山寨方法是一样的。同时他有说了，vim目前还是做不到像 Delphi那样显示一条限制线：Unlike some editors, Vim cannot show a line at this width.
 

@@ -23,8 +23,6 @@ GStreamer基础的命令（gst-launch和gst-inspect）和概念不进行说明�
     
 这里使用的GStreamer版本为**1.4.5**。
 
-<!--more-->
-    
 GStreamer官方文档好像只有manual（针对Application)和pwg（针对插件编写），文档内
 容较为简单，更多是概括性的讲解，有提示的作用，但并不十分深入。而官网上的
 Reference（例如[Core Reference]

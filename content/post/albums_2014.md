@@ -30,8 +30,6 @@ tags:
 
 推荐：BLISS, CREAM SODA, HUMAN, NEXT TO YOU, PRIDE AND JOY
 
-<!--more-->
-
 ## 宫崎骏名作钢琴曲 **
   
 这个没什么好说的了，吉卜力动画里的配乐换成钢琴曲，适合安静的时候听一下。
