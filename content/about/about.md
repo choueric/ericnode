@@ -1,8 +1,10 @@
 ---
 title: About
 author: zhs
-type: page
-tags: about
+tags:
+  - about
+  - me
+  - blog
 date: 2013-08-31T13:40:25+00:00
 views:
   - 12078
@@ -18,6 +20,6 @@ views:
 
 Just email me or tweet me if you wanna contact me ^_^.
 
-<a href="https://twitter.com/chou_eric" target="_blank">@chou_eric</a>，欢迎fo~. zhssmail@gmail.com
-
-<a href="https://github.com/choueric" target="_blank">https://github.com/choueric</a>
+- Email: <a href="mailto:zhssmail@gmail.com" >zhssmail@gmail.com</a>
+- twitter: <a href="https://twitter.com/chou_eric" target="_blank">@chou_eric</a>
+- Github: <a href="https://github.com/choueric" target="_blank">https://github.com/choueric</a>
