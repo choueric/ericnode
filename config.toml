@@ -1,0 +1,57 @@
+baseurl = "http://ericnode.info/"
+title = "ericNode"
+author = "Haishan Zhou"
+
+hascjklanguage = true
+paginate = 10
+
+# Shown in the side menu
+theme = "blackburn"
+copyright = "&copy; 2017. All rights reserved."
+canonifyurls = true
+
+[Taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[blackfriday]
+  extensions = ["joinLines"]
+
+[params]
+  # Shown in the home page
+  subtitle = "one node, one world"
+  # googleAnalytics = "Your Google Analytics tracking ID"
+  # disqus = "Your Disqus shortname"
+  # CSS name for highlight.js
+  highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+  # Include any custom CSS and/or JS files
+  # (relative to /static folder)
+  custom_css = ["css/my.css"]
+  custom_js = ["js/my.js"]
+
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 0
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "post"
+    url = "/post/"
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/about/about"
+
+[social]
+  twitter = "chou_eric"
+  github = "choueric"
+

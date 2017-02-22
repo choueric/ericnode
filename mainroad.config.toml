@@ -1,0 +1,49 @@
+baseurl = "http://ericnode.info"
+theme = "mainroad"
+title = "ericNode"
+languagecode = "en-us"
+defaultcontentlanguage = "en"
+hascjklanguage = true
+paginate = "10"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
+
+[Taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[Author]
+  name = "Haishan Zhou"
+  avatar = "img/avatar.jpg"
+
+
+[Params]
+  subtitle = "One node, One world"
+  description = " Haishan Zhou's Personal blog about everything"
+  opengraph = true
+  leftsidebar = false # Move sidebar to the left side if true
+  authorbox = false
+  post_navigation = true
+  highlightjs = "androidstudio"
+
+[Params.widgets]
+  search = true # Enable "Search" widget
+  recent_articles = true # Enable "Recent arcticles" widget
+  categories = true # Enable "Categories" widget
+  tags = true # Enable "Tags" widget
+
+[[menu.main]]
+  name = "post"
+  identifier = "post"
+  url = "/post/"
+  weight = 0
+
+[[menu.main]]
+  name = "about"
+  identifier = "about"
+  url = "/about/about"
+  weight = 1
+
+[blackfriday]
+  extensions = ["joinLines"]
