@@ -1,6 +1,6 @@
-baseurl = "http://ericnode.info/"
 title = "ericNode"
 author = "Haishan Zhou"
+port = 1333
 
 hascjklanguage = true
 paginate = 10
