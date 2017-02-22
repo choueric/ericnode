@@ -1,13 +1,11 @@
 #THEME_URL=https://github.com/vimux/mainroad
 THEME_URL=https://github.com/yoshiharuyamashita/blackburn.git
-BASEURL=http://ericnode.info
-BIND=45.56.87.74
 
 .PHONY: serve install_theme test alter help
 .DEFAULT_GOAL := help
 
 serve: ## run server
-	hugo server --watch --config config.toml -p 8080 -b ${BASEURL} --bind ${BIND}
+	./script/serve.sh
 
 install_theme: ## install theme
 	cd themes && git clone ${THEME_URL}
