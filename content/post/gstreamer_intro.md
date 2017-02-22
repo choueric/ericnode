@@ -12,6 +12,9 @@ categories:
 tags:
   - c
   - gstreamer
+blackfriday:
+  extensions:
+    - joinLines
 
 ---
 
@@ -39,15 +42,11 @@ Reference（例如[Core Reference]
     
 因为要操作专有设备，所以现有插件是不满足要求的。最后运行时的pipeline为:
 
-```
-testsrc -> testenc -> filesink
-```
+	testsrc -> testenc -> filesink
 
 执行命令:
 
-```sh
-$ gst-launch-1.0 testsrc ! testenc ! filesink location=save
-```
+	$ gst-launch-1.0 testsrc ! testenc ! filesink location=save
 
 文件`save`保存了H264编码格式的视频信息。
 
@@ -69,9 +68,7 @@ $ gst-launch-1.0 testsrc ! testenc ! filesink location=save
 2. 使用`--gst-debug`选项指定日志打印的模块和级别。例如，打开testsrc和testenc的
    所有级别日志，命令为:
 
-   ```sh
-   $ gst-launch-1.0 --gst-debug=testsrc:9,testenc:9 testsrc ! testenc ! filesink location=save
-   ```
+	$ gst-launch-1.0 --gst-debug=testsrc:9,testenc:9 testsrc ! testenc ! filesink location=save
 
 日志级别从0到9，0为关闭所有日志，9为开启所有日志。
 
@@ -289,9 +286,8 @@ TestSrc与TestEnc的协商过程大致相同。
 协商完成之后，就开始实际数据传输。在这里的应用场景里，数据（即视频帧）的流向如
 下所示:
 
-```text
-(device) testsrc --(video/x-raw)--> testenc --(video/x-h264)--> filesink (file)
-```
+	(device) testsrc --(video/x-raw)--> testenc --(video/x-h264)--> filesink (file)
+
 TestSrc从device中采集到raw格式数据，传输给TestEnc；TestEnc使用硬件编码将raw格式
 数据转换为H264格式，传输给FileSink；FileSink将其保存为文件。
 
