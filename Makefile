@@ -23,7 +23,7 @@ install_theme: ## install theme
 
 pull: ## run git pull to update.
 	@git pull
-	@cd themes && git pull
+	@cd themes/${THEME} && git pull
 
 new: ## execute `hugo new` to add a new post
 	@`pwd`/scripts/post.sh ${THEME} new 
