@@ -3,8 +3,8 @@
 BASEURL=http://ericnode.info
 BIND=45.56.87.74
 #BIND=127.0.0.1
-HUGO=$HOME/bin/hugo 
-SITEDIR=`pwd`
+HUGO=/home/zhs/bin/hugo 
+SITEDIR=/home/zhs/ericnode
 CONFIG=$SITEDIR/data/mainroad.config.toml
 PORT=80
 FLAGS="--disableLiveReload=true"
