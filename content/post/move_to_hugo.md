@@ -12,3 +12,18 @@ tags = ["hugo", "blog"]
 将我的博客
 迁移到了[hugo](https://gohugo.io/)。
 
+这是我的名字`testfunc`，你ok吗.
+
+```c
+int main() {
+	printf();
+}
+```
+
+```golang
+func main() {
+	fmt.Println("hello")
+}
+```
+
+结束。

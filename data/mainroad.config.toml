@@ -1,11 +1,11 @@
-baseurl = "http://ericnode.info"
+baseURL = "http://ericnode.info"
 theme = "mainroad"
 title = "ericNode"
 languagecode = "en-us"
 defaultcontentlanguage = "en"
 hascjklanguage = true
 paginate = "10"
-disqusShortname = "" # Enable comments by entering your Disqus shortname
+DisqusShortname = ""
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
 
@@ -26,6 +26,7 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   authorbox = false
   post_navigation = true
   highlightjs = "androidstudio"
+  disqus = false
 
 [Params.widgets]
   search = true # Enable "Search" widget
@@ -45,5 +46,6 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   url = "/about/about"
   weight = 1
 
-[blackfriday]
-  extensions = ["joinLines"]
+[Social]
+  twitter = "chou_eric"
+  github = "choueric"
