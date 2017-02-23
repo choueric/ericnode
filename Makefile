@@ -11,7 +11,7 @@ ALTER_THEME=blackburn
 serve: ## run server
 	`pwd`/scripts/serve.sh
 
-test: ## run test
+local: ## run server on local for debug
 	`pwd`/scripts/serve.sh test
 
 alter: ## run alternative theme
