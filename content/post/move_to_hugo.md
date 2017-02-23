@@ -1,7 +1,7 @@
 +++
 date = "2017-02-22T14:43:32+08:00"
 title = "将博客迁移至hugo"
-draft = false
+draft = true
 description = ""
 tags = ["hugo", "blog"]
 
@@ -9,21 +9,11 @@ tags = ["hugo", "blog"]
   extensions = ["joinLines"]
 +++
 
-将我的博客
+最近我用的linode发布了新的套餐将我的博客
 迁移到了[hugo](https://gohugo.io/)。
 
-这是我的名字`testfunc`，你ok吗.
+TODO:
 
-```c
-int main() {
-	printf();
-}
-```
-
-```golang
-func main() {
-	fmt.Println("hello")
-}
-```
-
-结束。
+- [ ] 使能`disqus`。
+- [ ] 自动git pull. cron
+- [ ] 自动发布到twitter上
