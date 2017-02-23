@@ -17,10 +17,9 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   name = "Haishan Zhou"
   avatar = "img/avatar.jpg"
 
-
 [Params]
   subtitle = "One node, One world"
-  description = " Haishan Zhou's Personal blog about everything"
+  description = "Haishan Zhou's Personal blog about everything"
   opengraph = true
   leftsidebar = false # Move sidebar to the left side if true
   authorbox = false
