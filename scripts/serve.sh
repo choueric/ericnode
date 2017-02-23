@@ -6,7 +6,7 @@ BIND=45.56.87.74
 HUGO=$HOME/bin/hugo 
 SITEDIR=`pwd`
 CONFIG=$SITEDIR/data/mainroad.config.toml
-PORT=8080
+PORT=80
 FLAGS="--disableLiveReload=true"
 
 if [[ $1 == "test" ]]; then
