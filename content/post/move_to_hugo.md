@@ -37,8 +37,8 @@ tags = ["hugo", "blog"]
 
 # 主题
 
-我选的主题是[mainroad][4]，不过看了其他一些主题之后，觉得有一些不满意的地方，于
-是fork出来，自己做了一些修改:
+hugo已经有很多主题了，在[这里][11]可以看到。我选的主题是[mainroad][4]，不过看了
+其他一些主题之后，觉得有一些不满意的地方，于是fork出来，自己做了一些修改:
 
 - 在文章列表视图中，每个文章summary后添加readmore。
 - 在单个文章视图中，将标签从底部移到顶部。
@@ -97,3 +97,4 @@ tags = ["hugo", "blog"]
 [8]: https://github.com/russross/blackfriday
 [9]: https://github.com/russross/blackfriday/pull/334
 [10]: /hugo-joinLines-linux-amd64.tar.bz2
+[11]: http://themes.gohugo.io
