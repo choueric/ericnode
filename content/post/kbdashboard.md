@@ -50,6 +50,17 @@ the executable file in [here][2] and generate the completion file.
 
 # How to Use this Tool
 
+## Generate Bash Completion File
+
+If it is your first time to use this tool, you should use the completion file
+to make life easier:
+```sh
+$ kbdashboard completion
+$ source kbdashboard.bash-completion
+```
+
+From now, you can use the auto-completion feature of bash.
+
 Here are the quick steps:
 
 1. `$ kbdashboard edit`: Edit the configuration and create a kernel profile.
