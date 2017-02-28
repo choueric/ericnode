@@ -6,7 +6,7 @@ defaultcontentlanguage = "en"
 hascjklanguage = true
 paginate = "10"
 DisqusShortname = ""
-googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+googleAnalytics = "UA-44366485-1" # Enable Google Analytics by entering your tracking id
 features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
 
 [Taxonomies]
