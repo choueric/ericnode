@@ -28,6 +28,10 @@ details. It has advantages :
 - Simple commands to perform various actions from configuring to installing.
 - Easy to configure by the json format.
 - Colorful shell output.
+- Built-in environment variables for installation scrips.
+
+This post describes how to use this tool and some details. The version mentioned
+here is `0.2.2-625c543`。
 
 # Build this Tool
 
@@ -83,6 +87,7 @@ invalid values:
 ```json
 {
         "color": true,
+        "debug": false,
         "editor": "vim",
         "current": 0,
         "profile": [
@@ -92,7 +97,7 @@ invalid values:
                 "arch":"arm",
                 "cross_compile":"arm-eabi-",
                 "target":"uImage",
-                "output_dir":"./_build",
+                "build_dir":"./_build",
                 "defconfig":"at91rm9200_defconfig",
                 "dtb":"at91rm9200ek.dtb",
                 "mod_install_dir":"./_build/mod",
@@ -105,6 +110,7 @@ invalid values:
 Except `profile`, other configurations are global:
 
 - `color`: Colorize the output or not.
+- `debug`: Switch debug output on or off.
 - `editor`: Specify text editor used by `edit` command.
 - `current`: Current profile index. 
 
@@ -120,7 +126,7 @@ building.
 - `arch`: architecture name, corresponding to the `ARCH`.
 - `cross_compile`: prefix of toolchain, corresponding to the `CROSS_COMPILE`.
 - `target`: target of kernel image.
-- `output_dir`: building directory, corresponding to `O`. If not absolute, it is 
+- `build_dir`: building directory, corresponding to `O`. If not absolute, it is 
   relative to the `src_dir`.
 - `defconfig`: kernel's default configuration in `arch/$arch/configs`.
 - `dtb`: the name of target DTB file.
@@ -185,7 +191,7 @@ $ kbdashboard build modules
 ```
 
 For some platforms, such as ARM, DTB file is also needed. Use command `build dtb`
-to compile DTB and install it into `output_dir`:
+to compile DTB and install it into `build_dir`:
 ```sh
 $ kbdashboard build dtb
 ```
@@ -197,10 +203,34 @@ Use command `install` to invoke installation script written by the users:
 $ kbdashboard install
 ```
 
-Because there is no such script at the beginning, this command will create an
+There is no such script at the beginning, so this command will create an
 empty script with name as `'profileName'_install.sh` in `$HOME/.kbdashboard`
 and open it using the `editor`. After editing, it will be invoked by this the
 command.
+
+In installation script, there are some built-in environment variables that are
+helpful:
+
+- `KBD_COLOR`: global, colorful ouput switch.
+- `KBD_DEBUG`: global, debug output switch.
+- `KBD_EDITOR`: global, edior name.
+- `KBD_CURRENT`: global, current profile index.
+- `KBD_NAME`: profile, name.
+- `KBD_SRC_DIR`: profile, source directory.
+- `KBD_ARCH`: profile, archetect.
+- `KBD_CC`: profile, cross compiler.
+- `KBD_TARGET`: profile, build target.
+- `KBD_BUILD_DIR`: profile, build directory.
+- `KBD_DEFCONFIG`: profile, default config name.
+- `KBD_DTB`: profile, DTB target name.
+- `KBD_MOD_DIR`: profile, modules install directory.
+- `KBD_THREAD_NUM`: profile, thread number.
+
+For example, if you want to copy your resulted uImage into a directory, which 
+is maybe your tftp directory, in your script you can write:
+```sh
+cp -v $KBD_BUILD_DIR/arch/arm/boot/uImage ~/tftp
+```
 
 If user want to modify the script, use command `edit install`:
 ```sh
@@ -222,8 +252,6 @@ $ kbdashboard install dtb
 It is up to you to write any things in your own script.
 
 # Command Details
-
-The command details are based on version `0.2.1`.
 
 ## help
 
