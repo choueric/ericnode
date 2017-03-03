@@ -360,8 +360,5 @@ This command does nothing with kernel building instead of generating a bash
 completion file. Copy this file to somewhere (e.g. ~/.kbdashboard-completion)
 and then `'$ source ~/.kbdashboard-completion`.
 
-# LICENSE
-The GPLv3 License. See `LICENSE.md` file for more details.
-
 [1]: https://golang.org/doc/install
 [2]: https://github.com/choueric/kbdashboard/releases
