@@ -10,7 +10,8 @@ description = "introduction of kbdashboard."
 # Overview
 
 This tool (i.e. `kbdashboard`) is used to configure and manage building 
-proceedings of multiple linux kernels. It is written in Golang.
+proceedings of multiple linux kernels. It is written in Golang and hosted in
+[this reposity][3].
 
 Developpers, especially in embedded system, usually need to modify, build and
 test more than one linux kernel in different projects. Each project may use one
@@ -20,7 +21,7 @@ different configurations. Anyway, developpers have to remember various
 configurations, direcotries and commands.
 
 To make life easier, `kbdashboard`, acting as a wrapper, handles all these
-details. It has advantages :
+details. It has some advantages and features:
 
 - Run in any directories, no need of changing into the one where the kernel
   source tree is.
@@ -29,9 +30,10 @@ details. It has advantages :
 - Easy to configure by the json format.
 - Colorful shell output.
 - Built-in environment variables for installation scrips.
+- Find out all DTS files related to the target DTB.
 
 This post describes how to use this tool and some details. The version mentioned
-here is `0.2.2-625c543`。
+here is `0.2.2-00210a9`。
 
 # Build this Tool
 
@@ -343,6 +345,21 @@ is:
 $ kbdashboard make bcm_defconfig
 ```
 
+## dts
+
+This command can help you find all DTS files related to the target DTB of
+current profile. Starting from the first DTS file, it find the "include"
+recurselya untill there are no more "include".
+
+- `dts list`: List all relevant DTS files. It is the default subcommand. Its
+  options include:
+	- `-t`: Print the tree-like graph.
+	- `-v`: Print the absolute file path.
+- `dts link`: Make soft link of all relevant DTS files into a dirctory. If
+  without `-o` option, the default out directory is `[profile_name]_dts` in
+  the current path.
+    - `-o`: Specify the output directory.
+
 ## version
 
 This command shows the version information consisted of version number, build
@@ -362,3 +379,4 @@ and then `'$ source ~/.kbdashboard-completion`.
 
 [1]: https://golang.org/doc/install
 [2]: https://github.com/choueric/kbdashboard/releases
+[3]: https://github.com/choueric/kbdashboard
