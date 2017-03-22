@@ -26,6 +26,7 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   post_navigation = true
   highlightjs = "androidstudio"
   disqus = false
+  adsense = true
 
 [Params.widgets]
   search = true # Enable "Search" widget
