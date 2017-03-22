@@ -26,13 +26,13 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   post_navigation = true
   highlightjs = "androidstudio"
   disqus = false
-  adsense = true
 
 [Params.widgets]
   search = true # Enable "Search" widget
   recent_articles = true # Enable "Recent arcticles" widget
   categories = true # Enable "Categories" widget
   tags = true # Enable "Tags" widget
+  adsense = true
 
 [[menu.main]]
   name = "post"
