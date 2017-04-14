@@ -28,6 +28,9 @@ pull: ## run git pull to update.
 new: ## execute `hugo new` to add a new post
 	@`pwd`/scripts/post.sh ${THEME} new 
 
+edit: ## execute `vim content/post` to edit a post
+	@`pwd`/scripts/post.sh ${THEME} edit 
+
 del: ## delete a post
 	@`pwd`/scripts/post.sh ${THEME} del
 
