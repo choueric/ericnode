@@ -108,3 +108,16 @@ color.branch.<slot>
 
 其实从`$ git help config`里可以看到几乎所有元素都有对应的配置选项，你可以根据自
 己的需要定制不仅仅是颜色，还包括其他方面的配置，不得不说git真是太强了。
+
+# Update
+
+好朋友[@weichuliu][2]推荐了[diff-so-fancy][1]，将对程序(例如patch)友好的格式转
+化成了对人友好的格式，比如:
+
+- 直接显示被修改的行号
+- 新旧差异的部分高亮显示
+
+通过它github中的README里的说明，很容易就能安装、配置使用。
+
+[1]: https://github.com/so-fancy/diff-so-fancy
+[2]: https://twitter.com/weichuliu
