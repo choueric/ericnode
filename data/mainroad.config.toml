@@ -41,10 +41,16 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   weight = 0
 
 [[menu.main]]
+  name = "bus"
+  identifier = "bus"
+  url = "/bus/"
+  weight = 1
+
+[[menu.main]]
   name = "about"
   identifier = "about"
   url = "/about/about"
-  weight = 1
+  weight = 2
 
 [Social]
   twitter = "chou_eric"
