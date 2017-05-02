@@ -32,7 +32,7 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   recent_articles = true # Enable "Recent arcticles" widget
   categories = true # Enable "Categories" widget
   tags = true # Enable "Tags" widget
-  adsense = true
+  adsense = false
 
 [[menu.main]]
   name = "post"
