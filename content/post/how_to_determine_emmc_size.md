@@ -2,7 +2,7 @@
 draft = false
 date = "2017-06-22T15:13:38+08:00"
 title = "如何计算eMMC大小"
-description = "how to calculate the size of an eMMC"
+description = "how to calculate the capacity of eMMC"
 isCJKLanguage = true
 categories = ["tech"]
 tags = ["emmc", "embedded"]
@@ -11,6 +11,8 @@ tags = ["emmc", "embedded"]
   extensions = ["joinLines"]
 
 +++
+
+# User Area
 
 计算方法其实已经在规范中给出了，参考eMMC 5.0 spec里的段落。首先是:
 
@@ -69,4 +71,25 @@ tags = ["emmc", "embedded"]
 
 直接使用Extended CSD中的`SEC_COUNT`，更加简单。
 
-当然以上并不包括eMMC芯片中的Boot Area和RPMB分区。
+# Boot Area
+
+对于Boot Area分区，规范中规定有两个Boot Area分区，大小为128KB的整数倍。通常每个
+为4MB，一共8MB。
+
+> 7.4.42 BOOT_SIZE_MULT [226]
+> 
+> The boot partition size is calculated from the register by using the following
+> equation:
+> 
+>   Boot Partition size = 128Kbytes × BOOT_SIZE_MULT
+
+# RPMP
+
+协议中规定必须有一个RPMP分区，大小为128KB的整数倍，通常为8MB。
+
+> 7.4.77 RPMB_SIZE_MULT [168]
+> 
+> The RPMB partition size is calculated from the register by using the following
+> equation:
+> 
+>   RPMB partition size = 128kB x RPMB_SIZE_MULT
