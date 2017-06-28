@@ -1,7 +1,7 @@
 +++
 date = "2017-02-22T14:43:32+08:00"
 title = "将博客迁移至hugo"
-description = ""
+description = "transfer blog to Hugo"
 categories = ["tech"]
 tags = ["hugo", "blog"]
 
@@ -75,6 +75,11 @@ hugo已经有很多主题了，在[这里][11]可以看到。我选的主题是[
 那么就会进行合并。虽然提了[Pull request][9]，不过编译之后的版本可以从[这里][10]
 下载。
 
+**Update 2017-06-28:**
+
+在blackfriday合并上面的PR之后，我又提交了一个[Pull request][12]给Hugo，以便该
+特性能够在Hugo中使用，目前该PR也被合并 :)
+
 # 总结
 
 最后，将整个hugo的目录放到Github上作为一个reposity，然后加上一个Makefile和一些
@@ -98,3 +103,4 @@ hugo已经有很多主题了，在[这里][11]可以看到。我选的主题是[
 [9]: https://github.com/russross/blackfriday/pull/334
 [10]: /hugo-joinLines-linux-amd64.tar.bz2
 [11]: http://themes.gohugo.io
+[12]: https://github.com/gohugoio/hugo/pull/3574
