@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASEURL=http://ericnode.info
-BIND=45.56.87.74
+BIND=ericnode.info
 #BIND=127.0.0.1
 HUGO=/home/zhs/bin/hugo 
 SITEDIR=/home/zhs/ericnode
