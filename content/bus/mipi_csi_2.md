@@ -4,7 +4,7 @@ date = "2017-05-02T11:23:52+08:00"
 title = "MIPI CSI-2简介"
 categories = ["Tech", "bus"]
 tags = ["bus", "embedded"]
-draft = true
+draft = false
 description = "simple introduction of MIPI CSI2"
 
 [blackfriday]
@@ -72,6 +72,8 @@ D-PHY有两种工作状态：低功耗(LP)和高性能(HS)。LP模式下处于�
 包。接收端通过SoT和EoT识别数据包并获取payload，然后交给上层解析。
 
 对物理层的访问和控制，是通过PPI(PHY Protocol Interface)进行的。
+
+关于D-PHY规范，由MIPI的规范文档`MIPI_D-PHY_Specification`说明。
 
 # CSI协议层
 
