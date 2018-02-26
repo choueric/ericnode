@@ -32,8 +32,8 @@ details. It has some advantages and features:
 - Built-in environment variables for installation scrips.
 - Find out all DTS files related to the target DTB.
 
-This post describes how to use this tool and some details. The version mentioned
-here is `0.2.2-00210a9`。
+This post describes how to use this tool and some details about it. The version
+mentioned here is `0.2.2-00210a9`。
 
 # Build this Tool
 
@@ -55,6 +55,12 @@ If you do not want to setup the building environment, that's fine. You can get
 the executable file in [here][2] and generate the completion file.
 
 # How to Use this Tool
+
+## Required Tools
+
+- build-essential
+- libncurses5-dev
+- cross tool chain
 
 ## Generate Bash Completion File
 
