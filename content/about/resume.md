@@ -15,7 +15,7 @@ tags = ["resume", "me", "career", "about"]
 - <zhssmail@gmail.com>
 - [Blog](http://ericnode.info)
 - [Github](https://github.com/choueric)
-- [Linkedin](https://www.linkedin.com/in/%E6%B5%B7%E7%8F%8A-%E5%91%A8-00263755)
+- [Linkedin](https://www.linkedin.com/in/Haishan-Zhou-00263755)
 
 Work as a software developer in embedded linux system with EE background.
 Experience in developing linux kernel drivers for various peripheral devices
@@ -51,6 +51,13 @@ projects, most of which are developed in Golang.
 - **Others**:
 	- QT
 	- freetype
+
+# Open Source Contributions
+--------------------------------------------------------------------------------
+
+- [Linux Kernel](https://github.com/torvalds/linux)
+- [hugo](https://github.com/gohugoio/hugo)
+- [blackfriday](https://github.com/russross/blackfriday)
 
 # Employment History
 --------------------------------------------------------------------------------
@@ -106,3 +113,119 @@ Major work includes:
 ## Bachelor of Electronic Science & Technology
 - Southeast University
 - Sep 2004 - Jul 2008
+
+# Projects
+--------------------------------------------------------------------------------
+
+## Pro Gearbox
+
+Pro Gearbox, adopting Xilinx Zynq as processor, efficiently converts HDMI A/V
+signals into IP data and acts as NDI source.
+
+Developed MW_SDK, the next generation infrastructural libraries as the OS
+abstract layer, which includes not only basic types, data structure, but also
+universal interfaces to access various kinds of hardware and user-space device
+drivers. The main work includes:
+
+- build system using CMake
+- atomic, spinlock, mutex and list modules
+- hardware interfaces for I2C, UART, UIO and GPIO
+- device drivers for Si5324 and VISCA
+
+Wrote TUI program to convert font by freetype from ttf to bitmap as C array,
+which then is used to generate the configuration menu in HDMI output.
+
+Wrote UIO-DMA driver managing the allocation, mapping of four kinds memories
+for DMA.
+
+## Stream Art
+
+An encoder reads multiple HDMI inputs and performs rich video processes, such
+as scaling, color space conversion, contrast adjustment, etc.
+
+Wrote OpenMAX and OpenGL programs to do benchmark on Jetson TK1 and TX1 for
+performance of video encode/decode unit and GPU.
+
+Ported the reference Linux kernel 3.10.40 and u-boot of Nvidia Tegra K1 to
+product board and developed kernel drivers for peripherals, such as nct1008.
+
+Developed mwcodec based on TK1 NvMM SDK and then FFmpeg codec plugins.
+
+Created rootfs build system to integrate all components: u-boot, kernel image,
+Ubuntu base filesystem and QT.
+
+Customized Android system, including startup tasks, remove unneeded packages,
+modifying flash procedure, adding new product device.
+
+## Ultra Stream HDMI
+
+A standalone recoding & streaming encoder, which automatically detects HDMI
+input format and performs high-quality H264 conversion.
+
+Assisted kernel development:
+
+- Wrote pinctrl and GPIO drivers.
+- Implemented Wake-on-Lan via ethernet transceiver RTL8211F.
+- Port kernel drivers for RTC rx-8010, touchscreen gt9147.
+- Created GPIO regulators.
+
+## BeneLink
+
+The BeneLink module, an interoperability component, reads information from
+external devices, such as ventilators and anesthesia machines, via UART and
+converts and uploads them Mindray's monitor.
+
+On a business travel alone to Europe for about 3 months, cooperated with doctors
+in hospitals and developers from third party manufacturers to accomplish the
+intergration of 8 devices.
+
+## BeneVision N22/N19
+
+It uses Intel Baytrail processor and runs on Linux system which is built by
+Yocto. The GUI is based on QT/XWindow stack. In addition to Gigabit ethernet,
+it supports 2.4G/5G WiFi connectivity with EAP.
+
+Participated in the pre-research phase of this project. In the developing
+phase, as the leader of 5 people embedded BSP team, managed the team work and
+communicated with colleagues from other departments.
+
+Besides the management, devlopment work included:
+
+- Ported the Linux kernel to product board
+- Customized Yocto to build entire system
+- Designed the protocols between the host and external modules,
+  including parameter modules via SPI, front pannel via I2C and power module via
+  UART
+- Implemented the SPI protocol on the host
+- Reworked the driver adapter library
+- Developed the DHCP client and IP-conflict-detection program
+
+## BeneView T1
+
+This mobile device, when it is put into the dock connecting to a VGA screen,
+outputs to the external screen in a larger layout to show more information.
+It adopts the TI AM1808 processor and runs Linux kernel 2.6.38.
+
+- Implemented dynamically resolution switch for framebuffer driver
+- Worked on the WiFi functions, including EAP authentication, roaming, QoS and
+  fixed wpa_supplicant bugs
+- Designed and implemented the watchdog system.
+
+## BeneHeart D1
+
+D1 is an AED product using TI AM1808 as processor and running on Linux 2.6.38.
+
+Took over midway of the BSP development:
+
+- Optimized the boot time of u-boot.
+- Fixed the pop sound bug in AIC1303 driver.
+- Reseached breakpad and applied to product.
+
+## Endeavor
+
+The product uses Intel Atom CPU and Windows Embedded as OS. The application
+program is written in C# and WPF. External parameter modules are connected to it
+via USB as HID devices. These modules are embedded system running on MCF52223.
+
+- Fixed USB communication bugs with parameter modules
+- Investigated USB bugs on Windows and Linux
