@@ -101,6 +101,6 @@ hugo已经有很多主题了，在[这里][11]可以看到。我选的主题是[
 [7]: https://github.com/tumashu/chinese-pyim/issues/9
 [8]: https://github.com/russross/blackfriday
 [9]: https://github.com/russross/blackfriday/pull/334
-[10]: /hugo-joinLines-linux-amd64.tar.bz2
+[10]: /hugo
 [11]: http://themes.gohugo.io
 [12]: https://github.com/gohugoio/hugo/pull/3574
