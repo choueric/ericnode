@@ -11,7 +11,7 @@ tags = ["resume", "me", "career", "about"]
 # Haishan Zhou
 --------------------------------------------------------------------------------
 
-- [Nanjing, China](https://www.google.com/maps/place/Nanjing,+Jiangsu,+China)
+- [Auckland, New Zealand](https://www.google.com/maps/place/Auckland)
 - <zhssmail@gmail.com>
 - [Blog](http://ericnode.info)
 - [Github](https://github.com/choueric)
@@ -62,9 +62,14 @@ projects, most of which are developed in Golang.
 # Employment History
 --------------------------------------------------------------------------------
 
+## Invenco Group Limited
+- **Embedded and Application Engineer**
+- Aug 2018 - Present
+- Auckland, New Zealand
+
 ## Magewell Electronics Co., Ltd.
 - **Software Developer**
-- Nov 2015 - Present
+- Nov 2015 - Jun 2018
 - Nanjing, China
 
 Responsible for the BSP routines: porting Linux kernel to customized boards,
