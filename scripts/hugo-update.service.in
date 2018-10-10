@@ -1,0 +1,14 @@
+[Unit]
+Description=Hugo Web Updater
+After=network.target
+ConditionPathExists=SITEDIR/scripts/update.sh
+
+[Service]
+Type=simple
+WorkingDirectory=SITEDIR
+StandardOutput=syslog
+StandardError=syslog
+ExecStart=/bin/sh -c "SITEDIR/scripts/update.sh"
+
+[Install]
+WantedBy=multi-user.target

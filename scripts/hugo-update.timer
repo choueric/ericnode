@@ -1,0 +1,10 @@
+[Unit]
+Description=Hugo Web Updater
+
+[Timer]
+OnStartupSec=5min
+OnCalendar=*:0,10,20,30,40,50
+Unit=hugo-update.service
+
+[Install]
+WantedBy=multi-user.target
