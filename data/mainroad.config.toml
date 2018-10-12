@@ -38,19 +38,19 @@ features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
   name = "post"
   identifier = "post"
   url = "/post/"
-  weight = 0
+  weight = 1
 
 [[menu.main]]
   name = "bus"
   identifier = "bus"
   url = "/bus/"
-  weight = 1
+  weight = 2
 
 [[menu.main]]
   name = "about"
   identifier = "about"
   url = "/about/about"
-  weight = 2
+  weight = 3
 
 [Social]
   twitter = "chou_eric"
