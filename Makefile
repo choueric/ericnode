@@ -1,5 +1,7 @@
 THEME_URL=https://github.com/choueric/mainroad
 THEME=mainroad
+HUGO_URL="https://github.com/gohugoio/hugo/releases/download"
+HUGO_TAR="v0.49.2/hugo_0.49.2_Linux-64bit.tar.gz"
 
 PREFIX=/usr/local
 SYSTEMD_DIR=/lib/systemd/system
@@ -15,13 +17,16 @@ TEMP=$(PWD)/generated
 
 .DEFAULT_GOAL := help
 
-clone_theme: ##  clone web site's theme
+download: ## download hugo and install theme
+	@echo "Download themes ..."
 	@cd themes && git clone ${THEME_URL}
+	@mkdir -p $(TEMP)
+	@wget "$(HUGO_URL)/$(HUGO_TAR)" -O $(TEMP)/`basename $(HUGO_TAR)`
+	@tar xfv  $(TEMP)/`basename $(HUGO_TAR)` -C $(TEMP)
 
 install: ## install hugo, theme and service
-	@./scripts/gen.sh
-	@tar xfv static/hugo-joinLines-linux-amd64.tar.bz2 -C $(TEMP)
 	@sudo install -v $(TEMP)/hugo $(PREFIX)/bin
+	@./scripts/gen.sh
 	@sudo install -v $(TEMP)/$(SERVICE) $(SYSTEMD_DIR)
 	@sudo install -v $(TEMP)/$(UPDATE_SERVICE) $(SYSTEMD_DIR)
 	@sudo install -v $(SITEDIR)/scripts/$(UPDATE_TIMER) $(SYSTEMD_DIR)
