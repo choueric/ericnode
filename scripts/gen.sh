@@ -1,12 +1,11 @@
 #!/bin/bash
 
 BASEURL=http://ericnode.info
-BIND=ericnode.info
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 SITEDIR=`realpath -e $SCRIPTPATH/..`
 CONFIG="$SITEDIR/data/mainroad.config.toml"
 PORT=1313
-FLAGS="--disableLiveReload=true"
+FLAGS="--disableLiveReload=true --appendPort=false"
 
 TEMP=$SITEDIR/generated
 
@@ -25,7 +24,6 @@ echo "sed '/^ExecStart/s,SITEDIR,"${SITEDIR}",' $IN > $OUT" >> $SED_SCRIPT
 echo "sed -i '/^ExecStart/s,CONFIG,"${CONFIG}",' $OUT" >> $SED_SCRIPT
 echo "sed -i '/^ExecStart/s,PORT,"${PORT}",' $OUT" >> $SED_SCRIPT
 echo "sed -i '/^ExecStart/s,BASEURL,"${BASEURL}",' $OUT" >> $SED_SCRIPT
-echo "sed -i '/^ExecStart/s,BIND,"${BIND}",' $OUT" >> $SED_SCRIPT
 echo "sed -i '/^ExecStart/s,FLAGS,"${FLAGS}",' $OUT" >> $SED_SCRIPT
 chmod +x $SED_SCRIPT
 $SED_SCRIPT
