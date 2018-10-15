@@ -127,7 +127,7 @@ struct _GstTestSrcClass
 
 这样的话，通过`gst-inspect`可以查看到GstTestSrc的继承关系:
 
-```text
+```
 GObject
  +----GInitiallyUnowned
        +----GstObject

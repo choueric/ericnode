@@ -25,7 +25,7 @@ ffmpeg是一个很强大的框架，包含众多的编解码器、提供很多�
 了之前的`avcodec_encode_video2`和`avcodec_decode_video2`。源码
 `libavcodec/avcodec.h`中的注释给出了一些说明，如下：
 
-```text
+```
 This API replaces the following legacy functions:
 - avcodec_decode_video2() and avcodec_decode_audio4():
   Use avcodec_send_packet() to feed input to the decoder, then use

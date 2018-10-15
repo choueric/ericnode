@@ -66,7 +66,7 @@ buildroot麻雀虽小但五脏俱全，该有的重要功能一样也不少：
 体到细节的介绍了buildroot，后续开发过程中还可以会过头再查找相关细节。通过该文
 档，了解了buildroot构建系统中的概念后，基本上就可以直接上手了。
 
-```text
+```
 make help                // 查看编译命令的帮助说明
 make menuconfig          // 配置构建系统，包括平台属性、指定内核和uboot等
 make linux-menuconfig    // 调用内核的menuconfig

@@ -28,7 +28,7 @@ draft = false
 
 执行`$ git help config`，在里面搜找`color.diff`，有以下几个相关配置的说明: 
 
-```text
+```
 color.diff
     Whether to use ANSI escape sequences to add color to patches. If this is set to always, git-diff(1), git-log(1), and git-show(1) will use color for all patches. If it is set to true or auto, those commands will only use color when output is to the terminal. Defaults to false.
 

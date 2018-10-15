@@ -16,12 +16,12 @@ tags = ["awk", "linux"]
 以前的Android的git仓库时发现gitlab里面工程名居然不支持"/"和"."，需要转换为"_"。
 例如需要将
 
-```text
+```
  <project path="abi/cpp" name="android/platform/abi/cpp-4.1" groups="pdk" />
 ```
 转换为:
 
-```text
+```
  <project path="abi/cpp" name="android_platform_abi_cpp-4-1" groups="pdk" />
 ```
 
@@ -32,7 +32,7 @@ grep什么的组合一下，无非就是搜索、替换，然后输出。最后�
 
 首先，脚本convert.awk内容如下:
 
-```awk
+```
 #!/usr/bin/awk -f
 
 {

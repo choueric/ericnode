@@ -22,7 +22,7 @@ tags:
 
 首先，把DVD放到光驱里(如果是有防拷的正版碟这个办法就不行了，还好我买的是第九区的碟，呵呵)，然后可以在命令行下运行：mplayer dvd://1 。这样的话，应该可以看到播放的窗口程序了，与此同时，可以在终端下看到如下信息：
 
-```text
+```
 MPlayer 1.0rc2-4.2.3 (C) 2000-2007 MPlayer Team
 CPU: Intel(R) Pentium(R) 4 CPU 3.20GHz (Family: 15, Model: 6, Stepping: 2)
 CPUflags: MMX: 1 MMX2: 1 3DNow: 0 3DNow2: 0 SSE: 1 SSE2: 1
@@ -109,7 +109,7 @@ Exiting... (Quit)
 
 这条命令执行大概输出是这样子的：
 
-```text
+```
 1 duplicate frame(s)!
 Pos:5569.5s 133551f (97%) 142.46fps Trem: 0min 135mb A-V:0.003 [0:191]
 ```
@@ -122,7 +122,7 @@ Pos:5569.5s 133551f (97%) 142.46fps Trem: 0min 135mb A-V:0.003 [0:191]
 
 运行输出是：
 
-```text
+```
 MPlayer 1.0rc2-4.2.3 (C) 2000-2007 MPlayer Team
 CPU: Intel(R) Pentium(R) 4 CPU 3.20GHz (Family: 15, Model: 6, Stepping: 2)
 CPUflags: MMX: 1 MMX2: 1 3DNow: 0 3DNow2: 0 SSE: 1 SSE2: 1

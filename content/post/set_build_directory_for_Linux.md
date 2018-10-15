@@ -122,7 +122,7 @@ __更新：__
 在意识到对内核了解不够之后，我去读了一下内核树根目录下的README，发现以上所总结
 的东西都是在制造轮子而已。。。在README中对应的文字如下：
 
-```text
+```
 BUILD directory for the kernel:
 
    When compiling the kernel, all output files will per default be

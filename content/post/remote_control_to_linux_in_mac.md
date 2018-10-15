@@ -27,15 +27,15 @@ google之后，挑出这样一篇帖子，较之某些全篇山下只有一条�
 
 安装ssh server，并确保可以进行X转发。一般查看/etc/ssh/ssh_config中是否有如下几行即可：
 
-```text
+```
 ForwardAgent yes
 ForwardX11 yes
 ForwardX11Trusted yes
-```text
+```
 
 同样确认/etc/ssh/sshd_config中是否有如下内容：
 
-```text
+```
 X11Forwarding yes
 ```
 
