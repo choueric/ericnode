@@ -32,10 +32,13 @@ install: ## install hugo, theme and service
 	@sudo install -v $(SITEDIR)/scripts/$(UPDATE_TIMER) $(SYSTEMD_DIR)
 	@sudo systemctl enable $(SERVICE)
 	@sudo systemctl enable $(UPDATE_SERVICE)
+	@sudo systemctl enable $(UPDATE_TIMER)
 
 uninstall: ## uninstall hugo and service
+	@sudo systemctl stop $(UPDATE_TIMER)
 	@sudo systemctl stop $(UPDATE_SERVICE)
 	@sudo systemctl stop $(SERVICE)
+	@sudo systemctl disable $(UPDATE_TIMER)
 	@sudo systemctl disable $(UPDATE_SERVICE)
 	@sudo systemctl disable $(SERVICE)
 	@sudo rm -fv $(SYSTEMD_DIR)/$(SERVICE)
