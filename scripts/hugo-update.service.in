@@ -6,6 +6,7 @@ ConditionPathExists=SITEDIR/scripts/update.sh
 [Service]
 Type=simple
 WorkingDirectory=SITEDIR
+User=CURRENT_USER
 StandardOutput=syslog
 StandardError=syslog
 ExecStart=/bin/sh -c "SITEDIR/scripts/update.sh"

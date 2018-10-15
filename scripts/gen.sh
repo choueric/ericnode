@@ -30,5 +30,6 @@ $SED_SCRIPT
 
 echo "#!/bin/bash" > $SED_UPDATE
 echo "sed 's,SITEDIR,"${SITEDIR}",' $IN_UP > $OUT_UP" >> $SED_UPDATE
+echo "sed -i '/^User/s,CURRENT_USER,"${USER}",' $OUT_UP" >> $SED_UPDATE
 chmod +x $SED_UPDATE
 $SED_UPDATE
