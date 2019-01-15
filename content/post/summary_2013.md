@@ -8,7 +8,7 @@ views:
 categories:
   - summary
 tags:
-  - thinking
+  - thinking, me
 
 ---
 
