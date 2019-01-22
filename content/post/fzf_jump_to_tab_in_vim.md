@@ -36,6 +36,7 @@ endfunction
 nnoremap <silent> <Leader>t :call fzf#run({
 \   'source':  reverse(map(range(1, tabpagenr('$')), 'v:val." "." ".tabName(v:val)')),
 \   'sink':    function('<sid>jumpToTab'),
+\   'down':    tabpagenr('$') + 2
 \ })<CR>
 ```
 
@@ -43,6 +44,9 @@ nnoremap <silent> <Leader>t :call fzf#run({
 `source` and shows them in fzf windows. One or multiple items are chosen by you
 and sent as parameter to `sink` which usually is a vim function to do whatever
 you want to do with the chosen items.
+
+`down` gives the position and size of the list pane. `up`, `left` or `right`
+can be used.
 
 Here, `source` gets a list of strings whose format is `tabnumber tabname`.
 The tab name can be got by function `tabName`.
