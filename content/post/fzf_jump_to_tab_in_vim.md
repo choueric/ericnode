@@ -14,9 +14,9 @@ gives basic tutorial about how to write your own fzf function in vimrc and many
 useful snippets.
 
 For a long time, I'm looking for a quick way to jump to one tab when opening a
-lot tabs in Vim, I can not find a quick way to jump to one tab. I thought fzf
-maybe can do that like it does to open file or open a buffer. However, I could
-not find such solution after google. So, I wrote it as below:
+lot tabs in Vim. I thought fzf maybe can do that like it does to open file or
+open a buffer. However, I could not find such solution after google. So, I
+implemented it as below:
 
 
 ```vim
@@ -39,9 +39,10 @@ nnoremap <silent> <Leader>t :call fzf#run({
 \ })<CR>
 ```
 
-`fzf#run` is the core of Vim integration. It takes a list of string itmes from `source` and shows them in fzf windows. One or multiple items are chosen by you
-and sent as a parameter to `sink` which usually is a vim function to do whatever
-you want to do with the chosen item.
+`fzf#run` is the core of Vim integration. It takes a list of string itmes from
+`source` and shows them in fzf windows. One or multiple items are chosen by you
+and sent as parameter to `sink` which usually is a vim function to do whatever
+you want to do with the chosen items.
 
 Here, `source` gets a list of strings whose format is `tabnumber tabname`.
 The tab name can be got by function `tabName`.
