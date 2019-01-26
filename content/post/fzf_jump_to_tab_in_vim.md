@@ -14,9 +14,9 @@ gives basic tutorial about how to write your own fzf function in vimrc and many
 useful snippets.
 
 For a long time, I'm looking for a quick way to jump to one tab when opening a
-lot tabs in Vim. I thought fzf maybe can do that like it does to open file or
+lot tabs in Vim. I thought fzf may do that like how it does to open file or
 open a buffer. However, I could not find such solution after google. So, I
-implemented it as below:
+implemented it in vimrc as below:
 
 
 ```vim
@@ -52,6 +52,9 @@ Here, `source` gets a list of strings whose format is `tabnumber tabname`.
 The tab name can be got by function `tabName`.
 `jumpToTab` at `sink` receives the selected item, gets the tab number
 using `split` and then execute command `:normal 2gt` if the tab number is 2.
+
+So after pressing `<Leader>t`, a window containing a list of filenames of all
+tabs pops up to let user choose the tab to jump.
 
 [1]: https://github.com/junegunn/fzf
 [2]: https://github.com/junegunn/fzf/wiki/Examples-(vim)
