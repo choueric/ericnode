@@ -46,7 +46,7 @@ C标准和libc库一直在演进，加入了许多新特性，这里说说atomic
 插一句题外话，从标准中还可以看到`stdbool.h`，`stdint.h`, `stddef.h`等等头文件，
 定义了很多以前标准中没有、然而特别实用的类型，特别是很多C++里的类型。
 
-其次，标准定义了`__STDC_NO_THREADS__`宏，用来在编译时检测是否支持stdatomic。同时
+其次，标准定义了`__STDC_NO_ATOMICS__`宏，用来在编译时检测是否支持stdatomic。同时
 还有一系列的宏和函数用来判断各种数据类型在当前的实现中是否支持原子操作，例如
 `ATOMIC_CHAR_LOCK_FREE`, `atomic_is_lock_free`。
 
